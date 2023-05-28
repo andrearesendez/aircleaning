@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Misiones</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="/style.css"/>
+  
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #e1f2fb;
+    }
+    
+    .container {
+      width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+    
+    h1 {
+      text-align: center;
+      color: #2980b9;
+    }
+    
+    .goal {
+      margin-bottom: 20px;
+      padding: 10px;
+      border: 1px solid #bdc3c7;
+      border-radius: 5px;
+    }
+    
+    .goal h3 {
+      margin: 0;
+      font-size: 20px;
+    }
+    
+    .goal p {
+      margin-top: 10px;
+      color: #555;
+      font-size: 16px;
+      text-align: justify;
+    }
+    
+    .goal .btn {
+      background-color: #3498db;
+      color: #fff;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+    
+    .counter {
+      text-align: center;
+      margin-top: 20px;
+    }
+    
+    .counter h2 {
+      color: #2980b9;
+    }
+  </style>
+</head>
+<body>
+    <ul class="nav justify-content-center">
+        <li class="nav-item">
+            <a class="nav-link active" href="index.html">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="perfil.html">Mi perfil</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="misiones.html">Misiones</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="tienda.html">Tienda</a>
+        </li>
+      </ul>
+
+  <div class="container">
+    <h1>Misiones</h1>
+    <div class="goal">
+      <h3>Meta 1</h3>
+      <p>Reducir el consumo de agua en el hogar.</p>
+      <button class="btn" onclick="sumarPuntos(10, this)">Realizado</button>
+    </div>
+    <div class="goal">
+      <h3>Meta 2</h3>
+      <p>Reciclar el papel y el cartón correctamente.</p>
+      <button class="btn" onclick="sumarPuntos(10, this)">Realizado</button>
+    </div>
+    <div class="goal">
+      <h3>Meta 3</h3>
+      <p>Utilizar bolsas reutilizables en lugar de bolsas plásticas.</p>
+      <button class="btn" onclick="sumarPuntos(10, this)">Realizado</button>
+    </div>
+    <div class="goal">
+      <h3>Meta 4</h3>
+      <p>Plantar árboles en áreas urbanas.</p>
+      <button class="btn" onclick="sumarPuntos(10, this)">Realizado</button>
+    </div>
+    <div class="goal">
+      <h3>Meta 5</h3>
+      <p>Reducir el consumo de energía apagando los aparatos electrónicos cuando no se usan.</p>
+      <button class="btn" onclick="sumarPuntos(10, this)">Realizado</button>
+    </div>
+    <div class="counter">
+      <h2>Nubecitas: <span id="puntos">0</span></h2>
+    </div>
+  </div>
+
+  <script>
+    function sumarPuntos(puntos, btn) {
+      if (!btn) {
+        return;
+      }
+      var puntosSpan = document.getElementById("puntos");
+      var puntosActuales = parseInt(puntosSpan.innerHTML);
+      puntosSpan.innerHTML = puntosActuales + puntos;
+      btn.disabled = true;
+      btn.innerHTML = "Completado";
+    }
+  </script>
+</body>
+</html>

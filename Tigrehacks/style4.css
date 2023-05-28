@@ -1,0 +1,13 @@
+.perfil{
+    color:black;
+    height: 90px;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: darken;
+    
+}
+
+.stats{
+    height: 70px;
+    width: 80%;
+}

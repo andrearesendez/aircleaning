@@ -1,0 +1,34 @@
+body{
+margin:0cm;
+}
+
+.cover{
+    color:white;
+    height: 300px;
+    background-image: url(nube2.JPG);
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(0,0,0,0.30);
+    background-blend-mode: darken;
+}
+p{
+    width: 80%;
+}
+
+.mapa{
+    color:black;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+}
+
+.registrarse{
+    display: block;
+    width: 50x;
+    background-color: cadetblue;
+    border-radius: 7px;
+    padding: 15px 30 px;
+    margin: 150px 300px;
+    color: white
+
+}
